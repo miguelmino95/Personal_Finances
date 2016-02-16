@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Aquí va el mes de la consulta"
+            android:text="Febrero 16, 2016"
             android:layout_marginRight="80dp"
             android:layout_gravity="center_vertical" />
 
