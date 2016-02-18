@@ -5,4 +5,29 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Opciones</string>
+    <string name="guardar">Guardar</string>
+    <string name="salir">Salir</string>
+    <string name="NuevoGasto">Nuevo Gasto</string>
+
+
+    <!-- Ingresos -->
+    <string name="Ingreso_txtNombre">Descripción:</string>
+    <string name="Ingreso_txtValor">Valor : $</string>
+    <string name="Ingreso_txtFecha">Fecha:</string>
+    <string name="Ingreso_btnRegistrar">Registrar</string>
+    <string name="title_activity_list_ingresos">Lista de Ingresos</string>
+    <string name="Lista_ingresos">Lista de Ingresos</string>
+
+    <!-- Mensajes -->
+    <string name="title_activity_ingresos">Registro de Ingresos</string>
+    <string name="msg_ing_guardado">Registro Guardado..!</string>
+    <string name="msg_ing_modificado">Registro Modificado..!</string>
+    <string name="msg_ing_eliminado">Registro Eliminado..!</string>
+    <string name="msg_ing_error">Error al guardar!</string>
+
+    <!-- validacion -->
+    <string name="Ingreso_validaFecha">Fecha Obligatorio</string>
+    <string name="Ingreso_validaValor">Valor Obligatorio</string>
+    <string name="Ingreso_validaNombre">Nombre Obligatorio</string>
+
 </resources>

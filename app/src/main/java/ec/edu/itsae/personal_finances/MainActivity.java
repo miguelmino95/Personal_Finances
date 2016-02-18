@@ -1,5 +1,7 @@
 package ec.edu.itsae.personal_finances;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,41 +15,36 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import dao.DBHelper;
+import dao.GastosDAO;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    SQLiteDatabase database; DBHelper ad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ad = new DBHelper(this);
+        database = ad.getWritableDatabase();
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton btnadding = (FloatingActionButton) findViewById(R.id.btnadding);
         btnadding.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+            public void onClick(View view)  {goIngresos(view);            }
         });
         FloatingActionButton btnaddgast = (FloatingActionButton) findViewById(R.id.btnaddgast);
         btnaddgast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                goGastos(view);
             }
         });
 
-        FloatingActionButton btnedit = (FloatingActionButton) findViewById(R.id.btnedit);
-        btnedit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -58,6 +55,18 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+
+
+    public void goIngresos (View v){
+        Intent ingreso = new Intent(this, IngresosFormActivity.class);
+        startActivity(ingreso);
+    }
+
+    public void goGastos (View v){
+        Intent gasto = new Intent(this, GastosFormActivity.class);
+        startActivity(gasto);
     }
 
     @Override
@@ -101,14 +110,24 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_adding) {
+            Intent ingreso = new Intent(this, IngresosListActivity.class);
+            startActivity(ingreso);
 
         } else if (id == R.id.nav_addgast) {
+            Intent gasto = new Intent(this, GastosListActivity.class);
+            startActivity(gasto);
 
         } else if (id == R.id.nav_Todo) {
+            Intent todo = new Intent(this, MainActivity.class);
+            startActivity(todo);
 
         } else if (id == R.id.nav_share) {
+            Intent todo = new Intent(this, MainActivity.class);
+            startActivity(todo);
 
         } else if (id == R.id.nav_send) {
+            Intent todo = new Intent(this, MainActivity.class);
+            startActivity(todo);
 
         }
 

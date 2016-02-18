@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".IngresosFormActivity" />
-        <activity android:name=".GastosFormActivity"></activity>
+        <activity android:name=".GastosFormActivity" />
+        <activity android:name=".IngresosListActivity" />
+        <activity android:name=".GastosListActivity"></activity>
     </application>
 
 </manifest>

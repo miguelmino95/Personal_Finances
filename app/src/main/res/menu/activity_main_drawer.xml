@@ -11,7 +11,12 @@
         <item
             android:id="@+id/nav_adding"
             android:icon="@android:drawable/ic_menu_add"
-            android:title="Ingresos" />
+            android:title="Ingresos"
+
+
+
+
+            />
         <item
             android:id="@+id/nav_addgast"
             android:icon="@android:drawable/ic_menu_add"
