@@ -49,10 +49,10 @@ public class IngresosListActivity extends ActionBarActivity implements AdapterVi
 
 
     }
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_list_usuarios, menu);
+        getMenuInflater().inflate(R.menu.menu_list_ingresos, menu);
         return true;
     }
 
@@ -65,11 +65,11 @@ public class IngresosListActivity extends ActionBarActivity implements AdapterVi
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_menu_guardar) {
-            startActivity(new Intent(this, UsuarioActivity.class));
+            startActivity(new Intent(this, IngresosFormActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
    @Override
     public void onClick(DialogInterface dialog, int which) {

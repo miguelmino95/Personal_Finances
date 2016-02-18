@@ -8,6 +8,7 @@
     <string name="guardar">Guardar</string>
     <string name="salir">Salir</string>
     <string name="NuevoGasto">Nuevo Gasto</string>
+    <string name="NuevoIngreso">Nuevo Ingreso</string>
 
 
     <!-- Ingresos -->
